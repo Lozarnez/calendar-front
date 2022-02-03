@@ -1,0 +1,54 @@
+.day {
+  position: relative;
+  width: calc(100% / 7);
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.innerDay {
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem;
+}
+
+.selected {
+  background-color: #13322B;
+  position: relative;
+  height: 100%;
+  padding: 2px;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.numeroDia {
+  align-self: end;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.textDark {
+  color: #4A4A4A;
+}
+
+.textLight {
+  color: #ccc;
+}
+
+.numeroDeEventos {
+  align-self: flex-start;
+  font-size: .5rem;
+  font-weight: 600;
+  color: #B38E5D;
+}

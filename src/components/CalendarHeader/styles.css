@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background: #F7F5F1;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4A4A4A;
+}
