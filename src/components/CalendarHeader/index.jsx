@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { Header } from './styledComponents';
 import "./styles.css";
 import { capitalizeFirstLetter } from "../../utils";
 
@@ -8,19 +9,19 @@ export default function CalendarHeader({
   currentYear,
   prevMonth,
   nextMonth,
+  isRoot,
 }) {
   return (
-    <div className="header">
+    <Header isRoot={isRoot}>
       <div className="headerNav" onClick={() => prevMonth()}>
-        <FaAngleLeft />
+        <FaAngleLeft className="iconoBlanco" />
       </div>
       <div className="headerTitle">
-        {`${capitalizeFirstLetter(
-        currentMonth
-      )} del ${currentYear}`}</div>
-      <div className="headerNav" onClick={() => nextMonth()}>
-        <FaAngleRight />
+        {`${capitalizeFirstLetter(currentMonth)} ${currentYear}`}
       </div>
-    </div>
+      <div className="headerNav" onClick={() => nextMonth()}>
+        <FaAngleRight className="iconoBlanco" />
+      </div>
+    </Header>
   );
 }

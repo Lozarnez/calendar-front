@@ -1,9 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  background: #F7F5F1;
+  justify-content: space-around;
+  height: 7vh;
+  width: 100%;
+  background: #691B33;
 }
 
 .headerNav {
@@ -18,5 +19,9 @@
 .headerTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4A4A4A;
+  color: #FFF;
+}
+
+.iconoBlanco {
+  fill: #FFF;
 }

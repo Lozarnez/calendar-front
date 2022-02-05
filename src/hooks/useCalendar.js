@@ -8,7 +8,8 @@ export const useCalendar = () => {
   const [calendar, setCalendar] = useState([]);
   const [value, setValue] = useState(moment());
 
-  console.log({value});
+  const Estedia = (day) => moment(day).isSame(value, "day");
+  console.log({Estedia});
 
   const currentMonth = value.format('MMMM');
   const currentYear = value.format('YYYY');
