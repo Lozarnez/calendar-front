@@ -12,6 +12,8 @@ import TextField from './TextField';
 import Card from './Card';
 import SimpleButton from './SimpleButton';
 import LoginForm from './LoginForm';
+import CreateEventForm from './CreateEventForm';
+import FavButton from './FavButton';
 
 export {
   Navigation,
@@ -28,4 +30,6 @@ export {
   Card,
   SimpleButton,
   LoginForm,
+  CreateEventForm,
+  FavButton,
 }

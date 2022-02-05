@@ -1,12 +1,22 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 import { fetchLogIn } from '../../reducers/fetchActions';
 import { Formik } from "formik";
 import { Container } from "./styledComponents";
 import { TextField, SimpleButton } from "../index";
+import { useEffect } from "react";
 
 export default function LoginForm(props) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isLogged = useSelector(state => state.events.user.isLogged);
+
+  useEffect(() => {
+    if(isLogged) {
+      navigate('/');
+    }
+  }, [isLogged]);
 
   const isDisabled = (values, errors) => {
     if (!values.email || !values.password || errors.email || errors.password) {
@@ -36,7 +46,6 @@ export default function LoginForm(props) {
         onSubmit={(values, { resetForm }) => {
           dispatch(fetchLogIn(values));
           resetForm();
-          console.log(values);
         }}
       >
         {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (

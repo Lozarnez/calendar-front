@@ -4,7 +4,9 @@ import { fetchLogIn } from './fetchActions';
 export const eventsReducer = createSlice({
   name: "events",
   initialState: {
-    user: {},
+    user: {
+      isLogged: false,
+    },
     events: [],
     currentEvent: {},
     currentOrder: {},
@@ -30,7 +32,7 @@ export const eventsReducer = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchLogIn.fulfilled, (state, action) => {
-      state.user = action.payload;
+      state.user.isLogged = action.payload;
     })
   },
 });

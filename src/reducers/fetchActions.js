@@ -13,10 +13,29 @@ export const fetchLogIn = createAsyncThunk(
     });
     const data = await response.json();
     if (data.success) {
-      localStorage.setItem("token", data.token);
+      sessionStorage.setItem("token", data.token);
+      return true;
+    } else {
+      return false;
+    }
+  }
+);
+
+export const fetchCrearEvento = createAsyncThunk(
+  'fetchCrearEvento',
+  async (event, thunkAPI) => {
+    const response = await fetch(`${connection.url}/eventos/crear-evento`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${sessionStorage.getItem('token')}`,
+      },
+      body: JSON.stringify(event),
+    });
+    const data = await response.json();
+    if (data.success) {
       return data;
     }
-    return response.json();
   }
 );
 
