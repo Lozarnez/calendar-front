@@ -1,12 +1,15 @@
 import React from 'react';
-import { Container, InputText, ErrorContainer } from './styledComponents';
+import { Container, InputText, FlatInputText, ErrorContainer } from './styledComponents';
 
 export default function TextField(props) {
   return (
     <Container>
-      <InputText
-        {...props}
-      />
+      {props.flat ?
+        <FlatInputText {...props} />
+      :
+        <InputText
+          {...props}
+        />}
       {props.error && <ErrorContainer>{props.error}</ErrorContainer>}
     </Container>
   );

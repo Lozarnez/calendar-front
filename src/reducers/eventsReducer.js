@@ -33,7 +33,11 @@ export const eventsReducer = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchLogIn.fulfilled, (state, action) => {
       state.user.isLogged = action.payload;
-    })
+      state.loading = false;
+    });
+    builder.addCase(fetchLogIn.pending, (state, action) => {
+      state.loading = true;
+    });
   },
 });
 

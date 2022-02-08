@@ -11,6 +11,7 @@ export default function LoginForm(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLogged = useSelector(state => state.events.user.isLogged);
+  const loading = useSelector(state => state.events.loading);
 
   useEffect(() => {
     if(isLogged) {
@@ -70,7 +71,7 @@ export default function LoginForm(props) {
               onBlur={handleBlur}
               error={touched.password && errors.password}
             />
-            <SimpleButton type="submit" text="Iniciar sesión" disabled={isDisabled(values, errors)} />
+            <SimpleButton loading={loading} type="submit" text="Iniciar sesión" disabled={isDisabled(values, errors)} />
           </form>
         )}
       </Formik>

@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   LogIn,
   EventosMes,
-  EventsByDay
+  EventsByDay,
+  CrearEvento,
 } from './routes';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<EventosMes />} />
         <Route path="/eventos-dia" element={<EventsByDay />} />
         <Route path="/eventos-semana" element={<div>Eventos semana</div>} />
-        <Route path="/crear-evento" element={<div>Crear Evento</div>} />
+        <Route path="/crear-evento" element={<CrearEvento />} />
         <Route path="/evento/:id" element={<div>Ver Evento</div>} />
         <Route path="/crear-orden" element={<div>Crear orden</div>} />
         <Route path="/orden/:id" element={<div>Ver Orden</div>} />

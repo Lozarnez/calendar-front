@@ -27,6 +27,29 @@ export const InputText = styled.input`
   }
 `;
 
+export const FlatInputText = styled.input`
+  width: 100%;
+  padding: 12px 0px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #b38e5d;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  ::placeholder {
+    color: #691b33;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid #b38e5d;
+  }
+`;
+
 export const ErrorContainer = styled.div`
   color: red;
   font-family: "Roboto", sans-serif;

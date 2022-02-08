@@ -12,8 +12,10 @@ import TextField from './TextField';
 import Card from './Card';
 import SimpleButton from './SimpleButton';
 import LoginForm from './LoginForm';
+import EventForm from './EventForm';
 import CreateEventForm from './CreateEventForm';
 import FavButton from './FavButton';
+import Modal from './Modal';
 
 export {
   Navigation,
@@ -30,6 +32,8 @@ export {
   Card,
   SimpleButton,
   LoginForm,
+  EventForm,
   CreateEventForm,
   FavButton,
+  Modal,
 }

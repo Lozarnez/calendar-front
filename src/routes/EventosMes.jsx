@@ -21,7 +21,7 @@ useEffect(() => {
     <Fragment>
       <Calendar />
       <CalendarDayEvents bgColor={"#13322b"} location={location} />
-      <FavButton text="Agregar Evento" />
+      <FavButton text="Agregar Evento" onClick={() => navigate('/crear-evento')} />
     </Fragment>
   );
 }
