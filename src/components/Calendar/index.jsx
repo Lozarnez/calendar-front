@@ -1,9 +1,11 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { useCalendar } from "../../hooks";
 import { Day, CalendarHeader, DaysRow } from "../index";
 import "./styles.css";
 
-export default function Calendar({isRoot}) {
+export default function Calendar({ onDayClick }) {
+  const location = useLocation();
   const {
     calendar,
     currentMonth,
@@ -17,10 +19,14 @@ export default function Calendar({isRoot}) {
     goToNextMonth,
   } = useCalendar();
 
+  const getDayValue = (day) => {
+    setValue(day);
+    onDayClick(day);
+  };
   return (
     <div className="calendar">
       <CalendarHeader
-        isRoot={isRoot ? isRoot : false}
+        isRoot={location.pathname === "/"}
         currentMonth={currentMonth}
         currentYear={currentYear}
         isSameMonth={isSameMonth}
@@ -35,7 +41,7 @@ export default function Calendar({isRoot}) {
               {week.map((day, i) => (
                 <Day
                   key={i}
-                  onClick={() => setValue(day)}
+                  onClick={() => getDayValue(day)}
                   day={formattedDay(day).toString()}
                   isSameDay={isSameDay(day)}
                   isInMonth={isInMonth(day)}

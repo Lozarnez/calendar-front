@@ -16,6 +16,8 @@ import EventForm from './EventForm';
 import CreateEventForm from './CreateEventForm';
 import FavButton from './FavButton';
 import Modal from './Modal';
+import CalendarButton from './CalendarButton';
+import InputHora from './InputHora';
 
 export {
   Navigation,
@@ -36,4 +38,6 @@ export {
   CreateEventForm,
   FavButton,
   Modal,
+  CalendarButton,
+  InputHora,
 }

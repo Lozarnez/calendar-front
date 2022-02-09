@@ -14,7 +14,7 @@ export const Overlay = styled.div`
 `;
 
 export const ContenedorModal = styled.div`
-  width: 50%;
+  width: 75%;
   min-height: 25%;
   background: #FFF;
   position: relative;
@@ -62,4 +62,93 @@ export const BotonCerrar = styled.button`
     background: #F4F4F4;
   }
 
+`;
+
+export const ContenedorTimeModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const ContenedorInputs = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0;
+`;
+
+export const TituloHora = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4A4A4A;
+`;
+
+export const ContenedorHora = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+`;
+
+export const SeparadorHora = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const ContenedorCheckbox = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+`;
+
+export const CheckboxLabel = styled.label`
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4A4A4A;
+`;
+
+export const ContenedorBotones = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const BotonContinuar = styled.button`
+  width: 100%;
+  padding: 18px;
+  margin: 12px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  background-color: ${(props) => (props.disabled ? "#ccc" : "#691B33")};
+  box-shadow: 0 0 5px #ccc;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  &:hover {
+    box-shadow: ${(props) => (props.disabled ? "none" : "0 0 5px #691B33")};
+  }
+`;
+
+export const BotonCancelar = styled.button`
+  width: 100%;
+  padding: 18px;
+  margin: 12px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #691b33;
+  cursor: pointer;
 `;

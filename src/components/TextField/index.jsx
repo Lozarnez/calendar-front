@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCalendar } from 'react-icons/fa';
 import { Container, InputText, FlatInputText, ErrorContainer } from './styledComponents';
 
 export default function TextField(props) {
